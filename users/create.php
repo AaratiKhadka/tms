@@ -53,7 +53,7 @@
                     }
 
                     // Redirect after 2 seconds
-                    header('Refresh: 2; URL=create.php');
+                    header('Refresh: 0; URL=create.php');
                 }
                 ?>
 

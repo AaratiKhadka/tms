@@ -21,16 +21,28 @@
                 if (isset($_GET['msg'])) {
                     $msg = $_GET['msg'];
 
-                    if ($msg=='warning') {
-                        echo "<div class='alert alert-warning'>Email or password are required</div>";
-                        echo "<meta http-equiv=\"refresh\" content=\"2;URL=index.php\">";
-                    }
-                    if ($msg=='error') {
-                        echo "<div class='alert alert-danger'>Email or password deoes not match, Try Again!</div>";
-                        echo "<meta http-equiv=\"refresh\" content=\"2;URL=index.php\">";
-                    }
+                    // if ($msg=='warning') {
+                    //     echo "<div class='alert alert-warning'>Email or password are required</div>";
+                    //     echo "<meta http-equiv=\"refresh\" content=\"2;URL=index.php\">";
+                    // }
+                    // if ($msg=='error') {
+                    //     echo "<div class='alert alert-danger'>Email or password deoes not match, Try Again!</div>";
+                    //     echo "<meta http-equiv=\"refresh\" content=\"2;URL=index.php\">";
+                    // }
+                    if ($msg == 'email_error') {
+                        echo"email doesnot match";
                 }
-                ?>
+                    if ($msg == 'password_error') {
+                        echo"password doesnot match";
+                }
+                    if ($msg == 'not_found') {
+                        echo"user is not found";
+                }
+                    if ($msg == 'required') {
+                        echo"email and password are required ";
+                }
+            }
+                    ?>
             <form action="auth/login.php" method="POST" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email address</label>
